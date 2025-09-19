@@ -1,8 +1,8 @@
 #MSU.AI
 
-This is a pre trained Application , 
- , this application is trained to answer question About Msu main academic Affair so you dont have to read the handbook
- , the data has already Extracted into pickle
- , the chunck data has already extracted
- , the data is from the University handBook of 2018 i guess(its a bit outdated)
- , ill just conttinue this if the hand book will be updated
+This is a pre-trained application.
+It is designed to answer questions about MSU Main’s Academic Affairs, so you don’t have to read the handbook manually.
+The data has already been extracted and stored in a pickle file.
+The text has also been chunked for easier processing.
+The information comes from the 2018 University Handbook (though it may be a bit outdated).
+I will continue updating this once a newer version of the handbook is released.
