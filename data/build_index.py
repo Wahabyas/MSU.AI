@@ -36,7 +36,7 @@ def main():
     with open(META_FILE, "wb") as f:
         pickle.dump({"chunks": chunks}, f)
 
-    print(f"✅ Saved index to {INDEX_FILE} and metadata to {META_FILE}")
+    print(f"Saved index to {INDEX_FILE} and metadata to {META_FILE}")
 
 if __name__ == "__main__":
     main()
