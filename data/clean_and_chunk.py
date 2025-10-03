@@ -36,13 +36,13 @@ def main():
     text = p.read_text(encoding="utf-8")
     cleaned = clean_text(text)
     Path(CLEAN_FILE).write_text(cleaned, encoding="utf-8")
-    print(f"✅ Cleaned text saved to {CLEAN_FILE}, length = {len(cleaned)} characters")
+    print(f"Cleaned text saved to {CLEAN_FILE}, length = {len(cleaned)} characters")
 
     chunks = chunk_text(cleaned, chunk_size=500, overlap=50)
     with open(CHUNKS_FILE, "w", encoding="utf-8") as f:
         for i, chunk in enumerate(chunks, start=1):
             f.write(f"### Chunk {i}\n{chunk}\n\n")
-    print(f"✅ Created {len(chunks)} chunks, saved to {CHUNKS_FILE}")
+    print(f"Created {len(chunks)} chunks, saved to {CHUNKS_FILE}")
 
     print("\n--- SAMPLE CHUNK ---\n")
     print(chunks[0][:400])  
