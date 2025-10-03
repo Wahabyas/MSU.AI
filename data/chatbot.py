@@ -12,13 +12,13 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 index = faiss.read_index(INDEX_FILE)
 with open(META_FILE, "rb") as f:
     chunks = pickle.load(f)
-print("✅ Ready! Ask me about MSU Main.\n")
+print("Ready! Ask me about MSU Main.\n")
 
 
 def search(query, k=3):
     xq = model.encode([query])
     D, I = index.search(np.array(xq).astype("float32"), k)
-    print("\n[DEBUG] Raw FAISS results:", I[0], D[0])  # 👈
+    print("\n[DEBUG] Raw FAISS results:", I[0], D[0])  # 
     results = []
     for rank, idx in enumerate(I[0]):
         idx = int(idx)
